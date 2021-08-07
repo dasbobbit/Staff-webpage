@@ -1,0 +1,230 @@
+.modal {
+  position: fixed;
+  z-index: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  align-items: center;
+  animation: fadeIn 0.5s;
+  /* opacity: 0.15; */
+}
+
+.modal__Content {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vw;
+  min-width: 900px;
+  max-width: 1117px;
+  height: 432px;
+  background: #fff;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  box-shadow: 0px 3px 30px #00000029;
+}
+
+.modal__closeIcon {
+  width: 18px;
+  position: absolute;
+  right: 0;
+  margin: 20px 15px 0 0;
+}
+
+.modal__closeIcon:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.modal__leftCol {
+  grid-column: 1 / 2;
+}
+
+.modal__leftCol img {
+  height: 432px;
+}
+
+.modal__rightCol {
+  margin-top: 30px;
+  padding-left: 60px;
+  grid-column: 2 / 3;
+}
+
+.modal__rightCol p {
+  margin: 0;
+  padding: 0;
+}
+
+.modal__name {
+  font-size: 31px;
+  font-weight: medium;
+  margin-top: 30px;
+}
+
+.modal__jobTitle {
+  font-size: 21px;
+  font-weight: lighter;
+}
+
+.modal__joinedDate {
+  display: inline-block;
+  font-size: 16px;
+  color: #fff;
+  padding: 4px ;
+  background: #EC840B;
+  margin-top: 20px;
+}
+
+.modal__birthday {
+  display: flex;
+  margin: 20px 0;
+}
+
+.modal__birthday p:first-of-type {
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.modal__birthday p:last-of-type {
+  color:#EC840B;
+  font-size: 14px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.modal__birthday img {
+  height: 23px;
+  width: 17px;
+  margin-top: -6px;
+}
+
+.modal__divider {
+  margin-left: -80px;
+  padding: 30px 0 30px 80px;
+  border-top: 1px dashed #EC840B;
+  border-bottom: 1px dashed #EC840B;
+}
+
+.modal__contactInfo {
+  display: flex;
+}
+
+.modal__contactInfo:last-of-type {
+  margin-top: 20px;
+}
+
+.modal__contactInfo img {
+  width: 22px;
+  margin-top: -1px;
+}
+
+.modal__contactInfo p {
+  width: 100%;
+  margin-left: 15px;
+  font-size: 18px;
+  font-weight: lighter;
+}
+
+.modal__jobDescription {
+  font-size: 15px;
+  font-weight: lighter;
+  margin-top: 20px;
+}
+
+
+@media only screen and (max-width: 900px) {
+  
+  .modal__Content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90vw;
+    min-width: unset;
+    height: unset;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: 2fr 3fr;
+    box-shadow: 0px 3px 30px #00000029;
+  }
+
+  .modal__leftCol {
+    overflow: hidden;
+    object-fit: cover;
+    width: 100%;
+    height: 50vw;
+    min-height: 94px;
+  }
+
+  .modal__leftCol img {
+    height: 90vw;
+  }
+
+  .modal__rightCol {
+    margin-top: unset;
+    margin: 20px 20px 0 20px;
+    padding-left: unset;
+    grid-column: 2 / 3;
+  }
+  
+  .modal__rightCol p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .modal__name {
+    font-size: 23px;
+  }
+
+  .modal__jobTitle {
+    font-size: 17px;
+  }
+
+  .modal__joinedDate {
+    display: inline-block;
+    font-size: 15px;
+    font-weight: lighter;
+    color: unset;
+    padding: unset;
+    background: unset;
+    margin: 10px 0 10px 0;
+  }
+
+  .modal__birthday {
+    display: none;
+  }
+
+  .modal__divider {
+    margin-left: unset;
+    padding: unset;
+    margin: 0 -20px;
+    padding: 20px 20px 20px 20px;
+  }
+
+  .modal__contactInfo p {
+    font-size: 15px;
+    margin-left: 15px;
+  }
+  
+  .modal__contactInfo:last-of-type {
+    margin-top: 10px;
+  }
+
+  .modal__jobDescription {
+    font-size: 15px;
+    margin: 20px 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

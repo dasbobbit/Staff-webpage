@@ -1,0 +1,36 @@
+
+.staffList__container, .staffList__count {
+  width: 80vw;
+  max-width: 1067px;
+  margin: 0 auto;
+} 
+
+.staffList__count {
+  font-size: 21px;
+  margin: 50px auto 30px auto;
+  border-bottom: 4px solid #FF4560;
+  padding-bottom: 20px;
+}
+
+.staffList__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 613px) {
+  .staffList__container, .staffList__count {
+    width: 90vw;
+  }
+
+  .staffList__count {
+    font-size: 19px;
+    margin-top: 30px;
+    padding-bottom: 10px;
+  }
+
+  .staffList__container {
+    flex-direction: column;
+  }
+}

@@ -1,6 +1,26 @@
-# Getting Started with Create React App
+## Technologies used
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- React
+- JavaScript
+- CSS
+- Used date-fns library for manipulating dates [date-fns.org/docs](https://date-fns.org/docs/Getting-Started)
+
+## Features
+
+- API call
+- Filtering employees client-side
+- Employees listed with the soonest birthday first
+- Responsive design
+- Real-time search function
+
+## Installation
+Use npm or yarn in the project directory, you can run:
+
+### `npm start`
+or 
+### `yarn start`
+
+
 
 ## Available Scripts
 

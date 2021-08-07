@@ -29,10 +29,6 @@
   padding: 0 10px;
 }
 
-/* .staffCard__info p {
-  margin: 5px 0;
-} */
-
 .staffCard__name {
   font-size: 21px;
   font-weight: medium;
@@ -92,11 +88,8 @@
   }
   
   .staffCard__imgContainer {
-    overflow: hidden;
-    object-fit: cover;
     width: 100%;
     height: 25vw;
-    /* min-height: 80px; */
     border-right: 3px solid #FF4560;
     grid-column: 1 / 2;
   }
@@ -107,53 +100,32 @@
   
   .staffCard__info {
     border-top: none;
-    padding: 0 10px;
     grid-column: 2 / 3;
   }
   
   .staffCard__name {
     font-size: 17px;
-    font-weight: medium;
     margin: 10px 0 0 0;
   }
   
   .staffCard__title {
     font-size: 13px;
-    font-weight: lighter;
-    margin: 5px 0 10px 0;
   }
   
   .staffCard__location {
     font-size: 14px;
-    position: absolute;
     bottom: 0;
-    color: #fff;
     padding: 6px 8px;
   }
-  
-  /* https://stackoverflow.com/questions/40628465/create-three-vertical-dots-ellipsis-inside-a-circle/40636741 */
   
   .staffCard__threeDots {
     top: unset;
     bottom: 0;
-    background: #fff;
     width: 30px;
     height: 30px;
-    border-radius: 50%;
-    box-shadow: 0 3px 6px #00000029;
     margin: 0px 10px 10px 0;
   }
   .staffCard__threeDots:after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: 2px;
-    height: 2px;
-    margin-left: -1px;
-    margin-top: -1px;
-    background-color: #FF4560;
-    border-radius: 50%;
     box-shadow: 0 0 0 1.5px #FF4560, 8
     px 0 0 1.5px #FF4560, -8px 0 0 1.5px #FF4560;
   }

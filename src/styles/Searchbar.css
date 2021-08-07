@@ -3,9 +3,7 @@
   opacity: 1;
   margin: 30px 0 0 0;
   padding: 30px 0;
-  /* width: 100vw; */
   box-shadow: 0 0 6px #00000029
-  
 }
 
 .searchBar__content {
@@ -25,8 +23,7 @@
   padding: 12px;
   width: 340px;
   border: 1px solid #82C5B2;
-  border-radius: 5px;
-  
+  border-radius: 5px; 
 }
 
 .searchBar__input::placeholder {

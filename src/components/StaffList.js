@@ -21,8 +21,8 @@ const StaffList = () => {
 
   const fetchData = async() => {
     const url = 'http://interview.dev.steinias.com/api/employees';
-
     setIsFetching(true);
+
     try {
       const response = await fetch(url, { mode: "cors" })
       const data = await response.json();
@@ -41,15 +41,15 @@ const StaffList = () => {
         getDayOfYear(parseJSON(b.birthday))
     );
 
-    let closestBdayIndex = orderedStaffData.findIndex(
+    let indexOfNextBday = orderedStaffData.findIndex(
       (item) =>
         getDayOfYear(parseJSON(currentDate)) <
         getDayOfYear(parseJSON(item.birthday))
     );
 
     let orderedDataFromToday = [
-      ...orderedStaffData.slice(closestBdayIndex, orderedStaffData.length),
-      ...orderedStaffData.slice(0, closestBdayIndex),
+      ...orderedStaffData.slice(indexOfNextBday, orderedStaffData.length),
+      ...orderedStaffData.slice(0, indexOfNextBday),
     ];
     setAllData(orderedDataFromToday);
     setStaffData(orderedDataFromToday);
@@ -102,7 +102,6 @@ const StaffList = () => {
           ))
         )}
       </div>
-
       <StaffModal viewModal={viewModal} closeModal={handleCloseModal} data={modalContent} />
     </div>
   );

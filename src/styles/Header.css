@@ -2,7 +2,6 @@
   width: 80vw;
   max-width: 1067px;
   margin: 0 auto;
-  /* position: relative; */
 }
 
 .header__title {
@@ -24,7 +23,6 @@
   .header__title {
     padding-top: 120px;
     font-size: 29px;
-    font-weight: normal;
   }
 
   .header__description {

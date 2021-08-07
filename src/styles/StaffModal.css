@@ -8,7 +8,6 @@
   overflow: auto;
   align-items: center;
   animation: fadeIn 0.5s;
-  /* opacity: 0.15; */
 }
 
 .modal__Content {
@@ -138,17 +137,11 @@
 @media only screen and (max-width: 900px) {
   
   .modal__Content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     width: 90vw;
     min-width: unset;
     height: unset;
-    background: #fff;
     display: flex;
     flex-direction: column;
-    grid-template-columns: 2fr 3fr;
     box-shadow: 0px 3px 30px #00000029;
   }
 
@@ -168,12 +161,6 @@
     margin-top: unset;
     margin: 20px 20px 0 20px;
     padding-left: unset;
-    grid-column: 2 / 3;
-  }
-  
-  .modal__rightCol p {
-    margin: 0;
-    padding: 0;
   }
   
   .modal__name {
@@ -185,7 +172,6 @@
   }
 
   .modal__joinedDate {
-    display: inline-block;
     font-size: 15px;
     font-weight: lighter;
     color: unset;

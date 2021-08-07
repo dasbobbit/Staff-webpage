@@ -21,6 +21,7 @@ const StaffModal = ({data, viewModal, closeModal}) => {
     let yearsText = (years === 1) ? `${years} year` : 
                     (years > 1) ? `${years} years` :
                     null;
+
     let monthsText = (months === 1) ? `${months} month` :
                     (months > 1) ? `${months} months` :
                     null;
@@ -32,7 +33,7 @@ const StaffModal = ({data, viewModal, closeModal}) => {
     }
   }
 
-  const birthdayAge = (birthday) => {
+  const ageAtNextBday = (birthday) => {
     let totalYears = differenceInYears(parseJSON(currentDate), parseJSON(birthday));
     let birthdayDate = format(parseJSON(birthday), "MMMM dd");
 
@@ -46,28 +47,34 @@ const StaffModal = ({data, viewModal, closeModal}) => {
       <div className="modal__Content">
 
           <img className="modal__closeIcon" alt="close" src={closeIcon} onClick={closeModal}/>
+
           <div className="modal__leftCol">
             <img src={profilePicture2x} alt={data.name} />
           </div>
+
           <div className="modal__rightCol">
             <p className="modal__name">{data.name}</p>
             <p className="modal__jobTitle">{data.jobTitle}</p>
             <span className="modal__joinedDate">{monthsHired(data.hireDate)}</span>
+
             <div className="modal__birthday">
               <p>Birthday: </p>
               <img src={bdayCake} alt="" />
-              <p>{birthdayAge(data.birthday)}</p>
+              <p>{ageAtNextBday(data.birthday)}</p>
             </div>
+
             <div className="modal__divider">
               <div className="modal__contactInfo">
                 <img src={emailIcon} alt="" />
                 <p>{data.email}</p>
               </div>
+              
               <div className="modal__contactInfo">
                 <img src={phoneIcon} alt="" />
                 <p>{trimNumber(data.mobile)}</p>
               </div>
             </div>
+
             <div className="modal__jobDescription">
               <p>{data.jobDescription}</p>
             </div>

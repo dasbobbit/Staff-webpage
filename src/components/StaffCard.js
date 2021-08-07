@@ -4,8 +4,6 @@ import profilePicture from '../assets/ProfilePicture.png'
 
 const StaffCard = ({id, name, jobTitle, openModal}) => {
 
-
-
   return (
     <div className="staffCard" onClick={() => openModal(id)}>
       <div className="staffCard__imgContainer">

@@ -7,6 +7,8 @@ import StaffModal from "./StaffModal";
 import getDayOfYear from "date-fns/getDayOfYear";
 import { parseJSON } from "date-fns";
 
+// This component is for the whole page (excluding the navbar)
+
 const StaffList = () => {
   const [isFetching, setIsFetching] = useState(true);
   const [allData, setAllData] = useState([]);
@@ -24,12 +26,13 @@ const StaffList = () => {
 
   const fetchData = async() => {
     const url = 'http://interview.dev.steinias.com/api/employees';
+    
     try {
       const response = await fetch(url, { mode: "cors" })
       const data = await response.json();
-      
-      setIsFetching(false);
+
       setStaffData(data);
+      setIsFetching(false);
     } catch (error) {
       console.error(error);
     }
@@ -56,7 +59,6 @@ const StaffList = () => {
     ];
     setAllData(orderedDataFromToday);
     setStaffData(orderedDataFromToday);
-    
   };
 
   const handleOpenModal = (id) => {

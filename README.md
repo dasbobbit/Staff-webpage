@@ -14,7 +14,11 @@
 - Real-time search function
 
 ## Installation
-Use npm or yarn in the project directory, you can run:
+Use npm or yarn in the project directory, you can add the dependencies:
+
+### `npm i`
+
+and run:
 
 ### `npm start`
 or 

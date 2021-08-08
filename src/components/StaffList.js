@@ -16,16 +16,19 @@ const StaffList = () => {
 
   useEffect(() => {
     fetchData();
-    sortStaffData();
   }, []);
+
+  useEffect(() => {
+    sortStaffData();
+  }, [isFetching]);
 
   const fetchData = async() => {
     const url = 'http://interview.dev.steinias.com/api/employees';
-    setIsFetching(true);
-
     try {
       const response = await fetch(url, { mode: "cors" })
       const data = await response.json();
+      
+      setIsFetching(false);
       setStaffData(data);
     } catch (error) {
       console.error(error);
@@ -53,7 +56,7 @@ const StaffList = () => {
     ];
     setAllData(orderedDataFromToday);
     setStaffData(orderedDataFromToday);
-    setIsFetching(false);
+    
   };
 
   const handleOpenModal = (id) => {
